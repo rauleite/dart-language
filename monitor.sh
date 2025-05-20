@@ -24,4 +24,5 @@ if ! command -v entr >/dev/null; then
 fi
 
 # Monitoramento dos arquivos .dart dentro de lib e bin
+# asdfjlkadjsf
 find lib bin -type f -name "*.dart" | entr -r dart run
