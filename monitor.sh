@@ -1,10 +1,14 @@
 #!/bin/sh
+####
+# Monitoring .dart files inside lib and bin
+# In the output terminal, you can do space keyboard for re-running
+###
 
-# Verifica se 'entr' está instalado
+# Check if 'entr' is installed
 if ! command -v entr >/dev/null; then
   echo "❌ 'entr' não está instalado!"
 
-  # Detecta o sistema operacional corretamente
+  # Detects the Operacional System correctly
   case "$(uname -s)" in
   Linux)
     echo "💡 Para instalar 'entr', use: sudo apt update && sudo apt install entr"
@@ -23,6 +27,5 @@ if ! command -v entr >/dev/null; then
   exit 1
 fi
 
-# Monitoramento dos arquivos .dart dentro de lib e bin
-# asdfjlkadjsf
+# starts monitoring
 find lib bin -type f -name "*.dart" | entr -r dart run

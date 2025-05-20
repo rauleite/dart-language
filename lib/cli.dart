@@ -1,9 +1,10 @@
 void tests() {
-  late final bool isTeenager;
-  const age = 12;
-  if (age >= 13 && age <= 19) {
-    isTeenager = true;
-  } else if (age < 13) {
-    isTeenager = false;
-  }
+  var counter = 0;
+  do {
+    print('counter do = $counter');
+    counter++;
+    if (counter == 2) {
+      break;
+    }
+  } while (counter < 4);
 }
